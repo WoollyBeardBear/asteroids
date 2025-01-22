@@ -2,6 +2,7 @@ import pygame
 import random
 from circleshape import *
 from constants import *
+from logic import *
 
 class Asteroid(CircleShape):
     def __init__(self, x, y, radius):
@@ -22,6 +23,7 @@ class Asteroid(CircleShape):
 
         self.kill()
         if self.radius <= ASTEROID_MIN_RADIUS:
+            
             return
         
         new_asteroid_1 = Asteroid(self.position.x, self.position.y, new_radius)
